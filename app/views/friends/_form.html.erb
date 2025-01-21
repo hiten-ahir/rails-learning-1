@@ -11,32 +11,31 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+  <div class='my-3' >
+    <%= form.text_field :first_name, placeholder:'First Name' %>
+  </div>
+
+  <div class='my-3' >
+    <%= form.text_field :last_name, placeholder:'Last Name' %>
+  </div>
+
+  <div class='my-3' >
+    <%= form.text_field :email, placeholder:'Email' %>
+  </div>
+
+  <div class='my-3' >
+    <%= form.text_field :phone, placeholder:'Phone' %>
+  </div>
+
+  <div class='my-3' >
+    <%= form.text_field :insta, placeholder:'Insta' %>
+  </div>
+
+  <div class='my-3' >
+    <%= form.number_field :user_id, id: :friends_user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div>
-    <%= form.label :insta, style: "display: block" %>
-    <%= form.text_field :insta %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-dark' %>
   </div>
 <% end %>
